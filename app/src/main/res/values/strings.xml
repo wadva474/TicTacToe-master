@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TicTacToe</string>
+    <string name="board_type">BOARD-TYPE</string>
+    <string name="reset">reset</string>
+    <string name="player_o">PLAYER O</string>
+    <string name="player_x">PLAYER X</string>
+    <array name="board">
+        <item name="3x3">3X3</item>
+        <item name="5X5">5X5</item>
+    </array>
+</resources>
