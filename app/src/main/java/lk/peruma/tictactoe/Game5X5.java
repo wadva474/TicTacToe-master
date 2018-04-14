@@ -231,18 +231,18 @@ public class Game5X5 extends AppCompatActivity {
             if (!gameCompleted) {
                 if (availableSquares == 0){
                     gameCompleted = true;
-                    textGameStatus.setText("Game Drawn!");
+                    textGameStatus.setText(R.string.Draw);
                     return;
                 }
                 else {
                     changePlayer();
-                    textGameStatus.setText("Current Player: "+currentPlayer.name());
+                    textGameStatus.setText(String.format("Current Player: %s", currentPlayer.name()));
                     if(currentPlayer == State.O && vsComputer)
                         systemMove();
                 }
             }
             else{
-                textGameStatus.setText("Winner: "+currentPlayer.name());
+                textGameStatus.setText(String.format("Winner: %s", currentPlayer.name()));
                 if (currentPlayer.equals(State.X)){
                     ScoreX+=1;
                     scorex.setText(String.valueOf(ScoreX));
@@ -364,7 +364,7 @@ public class Game5X5 extends AppCompatActivity {
         btn442.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
 
 
-        textGameStatus.setText("Current Player: "+currentPlayer.name());
+        textGameStatus.setText(String.format("Current Player: %s", currentPlayer.name()));
 
         vsComputer = getIntent().getStringExtra("GameType").equalsIgnoreCase("Computer")?true:false;
 
