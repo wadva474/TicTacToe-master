@@ -4,8 +4,25 @@
     <string name="reset">reset</string>
     <string name="player_o">PLAYER O</string>
     <string name="player_x">PLAYER X</string>
+    <string name="play_against_human">Play Against Human</string>
+    <string name="play_against_computer">Play Against Computer</string>
+    <string name="player_1">PLAYER 1</string>
+    <string name="player_2">PLAYER 2</string>
+    <string name="Draw">Game Drawn!</string>
+    <string name="playercurrent">Current Player:</string>
+    <string name="_0">0</string>
+    <string name="new_board">New Board</string>
+    <string name="winer">Winer:</string>
     <array name="board">
         <item name="3x3">3X3</item>
         <item name="5X5">5X5</item>
+    </array>
+    <array name="player">
+        <item name="O">O</item>
+        <item name="X">X</item>
+    </array>
+    <array name="player2">
+        <item name="x">X</item>
+        <item name="o">O</item>
     </array>
 </resources>

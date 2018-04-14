@@ -12,7 +12,7 @@
     tools:context="lk.peruma.tictactoe.HomeActivity">
 
     <Button
-        android:text="Play Against Human"
+        android:text="@string/play_against_human"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/buttonHuman"
@@ -22,42 +22,80 @@
         android:onClick="onClick"
        />
 
+
     <Button
-        android:text="Play Against Computer"
+        android:id="@+id/buttonComputer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/buttonComputer"
-        android:layout_marginTop="15dp"
-        android:layout_below="@+id/buttonHuman"
-        android:layout_alignLeft="@+id/buttonHuman"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="159dp"
         android:background="@color/colorPrimary"
-        android:layout_alignStart="@+id/buttonHuman"
-        android:onClick="onClick" />
+        android:onClick="onClick"
+        android:text="@string/play_against_computer" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/buttonComputer"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp"
+        android:layout_marginBottom="35dp"
         android:fontFamily="monospace"
+        android:padding="5dp"
         android:text="@string/board_type"
-        android:textSize="30sp"
-        android:padding="5dp"/>
+        android:textSize="30sp" />
 
     <Spinner
         android:layout_width="wrap_content"
         android:id="@+id/boardSpinner"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView2"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
         android:entries="@array/board"
-       >
+       />
 
-    </Spinner>
+    <TextView
+        android:id="@+id/Player1"
+        android:layout_width="205dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignStart="@+id/buttonHuman"
+        android:layout_marginTop="56dp"
+        android:text="@string/player_1"
+        android:textSize="14sp"
+       />
+
+    <TextView
+        android:id="@+id/Player2"
+        android:layout_width="204dp"
+        android:gravity="end"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/Player1"
+        android:layout_toEndOf="@+id/boardSpinner"
+        android:textSize="14sp"
+        android:text="@string/player_2" />
+
+    <Spinner
+        android:id="@+id/player1spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:layout_marginTop="94dp"
+        android:entries="@array/player2" />
+
+    <Spinner
+        android:id="@+id/player2spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/player1spinner"
+        android:gravity="center"
+        android:entries="@array/player" />
 
 
 </RelativeLayout>

@@ -153,18 +153,18 @@ public class GameActivity extends AppCompatActivity {
             if (!gameCompleted) {
                 if (availableSquares == 0){
                     gameCompleted = true;
-                    textGameStatus.setText("Game Drawn!");
-                    return;
+                    textGameStatus.setText(R.string.Draw);
+
                 }
                 else {
                     changePlayer();
-                    textGameStatus.setText("Current Player: "+currentPlayer.name());
+                    textGameStatus.setText(String.format("%s%s", getString(R.string.playercurrent), currentPlayer.name()));
                     if(currentPlayer == State.O && vsComputer)
                         systemMove();
                 }
             }
             else{
-                textGameStatus.setText("Winner: "+currentPlayer.name());
+                textGameStatus.setText(String.format("Winner: %s", currentPlayer.name()));
                 if (currentPlayer.equals(State.X)){
                     ScoreX+=1;
                     scorex.setText(String.valueOf(ScoreX));
@@ -254,8 +254,8 @@ public class GameActivity extends AppCompatActivity {
     }
 
     private void initializeGame(){
+
         colorCurrentPlayer = Color.argb(255,236,26,97);
-       // colorDefaultBackground = Color.parseColor("#ffd6d7d7");
         colorWinningBackground = Color.parseColor("#FF34B5E5");
 
         squares = new State[3][3];
@@ -298,7 +298,7 @@ public class GameActivity extends AppCompatActivity {
         btn22.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
 
 
-        textGameStatus.setText("Current Player: "+currentPlayer.name());
+        textGameStatus.setText(String.format("Current Player: %s", currentPlayer.name()));
 
         vsComputer = getIntent().getStringExtra("GameType").equalsIgnoreCase("Computer")?true:false;
 
